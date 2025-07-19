@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+    <name>erl_geometry_msgs</name>
+    <version>0.1.0</version>
+    <description>erl_geometry_msgs is a ROS package for geometry messages to transmit data structures in erl_geometry.</description>
+    <author email="daizhirui@hotmail.com">Zhirui Dai</author>
+    <maintainer email="daizhirui@hotmail.com">Zhirui Dai</maintainer>
+    <license>MIT</license>
+    <url type="repository">https://github.com/ExistentialRobotics/erl_geometry_msgs.git</url>
+
+    <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
+    <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
+    <buildtool_depend>erl_cmake_tools</buildtool_depend>
+
+    <!-- common ROS dependencies -->
+    <depend>std_msgs</depend>
+
+    <!-- message generation dependencies -->
+    <build_depend condition="$ROS_VERSION == 1">message_generation</build_depend>
+    <exec_depend condition="$ROS_VERSION == 1">message_runtime</exec_depend>
+    <build_depend condition="$ROS_VERSION == 2">rosidl_default_generators</build_depend>
+    <exec_depend condition="$ROS_VERSION == 2">rosidl_default_runtime</exec_depend>
+    <member_of_group condition="$ROS_VERSION == 2">rosidl_interface_packages</member_of_group>
+
+    <export>
+        <rviz condition="$ROS_VERSION == 1" plugin="${prefix}/plugin_description.xml" />
+        <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
+    </export>
+
+</package>
