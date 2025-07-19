@@ -23,6 +23,8 @@
     <exec_depend condition="$ROS_VERSION == 2">rosidl_default_runtime</exec_depend>
     <member_of_group condition="$ROS_VERSION == 2">rosidl_interface_packages</member_of_group>
 
+    <depend>erl_geometry</depend>
+
     <export>
         <rviz condition="$ROS_VERSION == 1" plugin="${prefix}/plugin_description.xml" />
         <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>

@@ -8,6 +8,7 @@ A ROS package for geometry messages to transmit data structures in erl_geometry.
 ```shell
 cd <your_ros_ws>/src
 git clone https://github.com/ExistentialRobotics/erl_cmake_tools.git
+git clone https://github.com/ExistentialRobotics/erl_geometry.git
 git clone https://github.com/ExistentialRobotics/erl_geometry_msgs.git
 cd <your_ros_ws>
 # for ROS1

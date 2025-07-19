@@ -11,7 +11,7 @@ if (NOT COMMAND erl_project_setup)
     find_package(erl_cmake_tools REQUIRED)
 endif ()
 
-erl_project_setup()
+erl_project_setup(ERL_PACKAGES erl_geometry)
 erl_setup_ros(
     CATKIN_COMPONENTS roscpp std_msgs message_generation #
     CATKIN_DEPENDS roscpp std_msgs message_runtime #
