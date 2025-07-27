@@ -23,7 +23,7 @@
     <exec_depend condition="$ROS_VERSION == 2">rosidl_default_runtime</exec_depend>
     <member_of_group condition="$ROS_VERSION == 2">rosidl_interface_packages</member_of_group>
 
-    <depend>erl_geometry</depend>
+    <exec_depend>erl_geometry</exec_depend>
 
     <export>
         <rviz condition="$ROS_VERSION == 1" plugin="${prefix}/plugin_description.xml" />
