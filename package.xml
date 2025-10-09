@@ -15,6 +15,7 @@
 
     <!-- common ROS dependencies -->
     <depend>std_msgs</depend>
+    <depend>erl_geometry</depend>
 
     <!-- message generation dependencies -->
     <build_depend condition="$ROS_VERSION == 1">message_generation</build_depend>
@@ -22,8 +23,6 @@
     <build_depend condition="$ROS_VERSION == 2">rosidl_default_generators</build_depend>
     <exec_depend condition="$ROS_VERSION == 2">rosidl_default_runtime</exec_depend>
     <member_of_group condition="$ROS_VERSION == 2">rosidl_interface_packages</member_of_group>
-
-    <exec_depend>erl_geometry</exec_depend>
 
     <export>
         <rviz condition="$ROS_VERSION == 1" plugin="${prefix}/plugin_description.xml" />
