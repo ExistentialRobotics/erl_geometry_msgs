@@ -13,8 +13,8 @@ endif()
 
 erl_project_setup(ERL_PACKAGES erl_geometry)
 erl_setup_ros(
-    CATKIN_COMPONENTS std_msgs message_generation
-    CATKIN_DEPENDS std_msgs message_runtime
+    CATKIN_COMPONENTS std_msgs nav_msgs message_generation
+    CATKIN_DEPENDS std_msgs nav_msgs message_runtime
     MSG_FILES OccupancyTreeMsg.msg GridMapMsg.msg GridMapUpdateMsg.msg
     MSG_DEPENDENCIES std_msgs nav_msgs
     ROS2_COMPONENTS std_msgs nav_msgs)
