@@ -31,11 +31,13 @@ namespace erl::geometry {
     bool
     SaveToOccupancyTreeMsg(
         const std::shared_ptr<const AbstractOccupancyOctree<Dtype>>& tree,
-        bool binary,
+        const double scale,
+        const bool binary,
         erl_geometry_msgs::OccupancyTreeMsg& msg) {
         std::ostringstream s;  // create a ostream to wrap msg->data
         msg.dim = 3;
         msg.tree_type = tree->GetTreeType();
+        msg.scale = scale;
         msg.is_double = std::is_same_v<Dtype, double>;
         msg.binary = binary;
         if (binary) {
@@ -60,11 +62,13 @@ namespace erl::geometry {
     bool
     SaveToOccupancyTreeMsg(
         const std::shared_ptr<const AbstractOccupancyQuadtree<Dtype>>& tree,
-        bool binary,
+        const double scale,
+        const bool binary,
         erl_geometry_msgs::OccupancyTreeMsg& msg) {
         std::ostringstream s;  // create a ostream to wrap msg->data
         msg.dim = 2;
         msg.tree_type = tree->GetTreeType();
+        msg.scale = scale;
         msg.is_double = std::is_same_v<Dtype, double>;
         msg.binary = binary;
         if (binary) {
