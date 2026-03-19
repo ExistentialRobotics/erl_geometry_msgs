@@ -8,8 +8,8 @@ namespace erl::geometry {
     template<typename Dtype>
     bool
     LoadFromOccupancyTreeMsg(
-        const erl_geometry_msgs::OccupancyTreeMsg& msg,
-        std::shared_ptr<AbstractOccupancyOctree<Dtype>>& tree) {
+        const erl_geometry_msgs::OccupancyTreeMsg &msg,
+        std::shared_ptr<AbstractOccupancyOctree<Dtype>> &tree) {
         std::istringstream s;  // create a istream to wrap msg->data
         s.str(std::string(msg.data.begin(), msg.data.end()));
         if (msg.binary) { return tree->ReadBinary(s); }
@@ -19,8 +19,8 @@ namespace erl::geometry {
     template<typename Dtype>
     bool
     LoadFromOccupancyTreeMsg(
-        const erl_geometry_msgs::OccupancyTreeMsg& msg,
-        std::shared_ptr<AbstractOccupancyQuadtree<Dtype>>& tree) {
+        const erl_geometry_msgs::OccupancyTreeMsg &msg,
+        std::shared_ptr<AbstractOccupancyQuadtree<Dtype>> &tree) {
         std::istringstream s;  // create a istream to wrap msg->data
         s.str(std::string(msg.data.begin(), msg.data.end()));
         if (msg.binary) { return tree->ReadBinary(s); }
@@ -30,10 +30,10 @@ namespace erl::geometry {
     template<typename Dtype>
     bool
     SaveToOccupancyTreeMsg(
-        const std::shared_ptr<const AbstractOccupancyOctree<Dtype>>& tree,
+        const std::shared_ptr<const AbstractOccupancyOctree<Dtype>> &tree,
         const double scale,
         const bool binary,
-        erl_geometry_msgs::OccupancyTreeMsg& msg) {
+        erl_geometry_msgs::OccupancyTreeMsg &msg) {
         std::ostringstream s;  // create a ostream to wrap msg->data
         msg.dim = 3;
         msg.tree_type = tree->GetTreeType();
@@ -61,10 +61,10 @@ namespace erl::geometry {
     template<typename Dtype>
     bool
     SaveToOccupancyTreeMsg(
-        const std::shared_ptr<const AbstractOccupancyQuadtree<Dtype>>& tree,
+        const std::shared_ptr<const AbstractOccupancyQuadtree<Dtype>> &tree,
         const double scale,
         const bool binary,
-        erl_geometry_msgs::OccupancyTreeMsg& msg) {
+        erl_geometry_msgs::OccupancyTreeMsg &msg) {
         std::ostringstream s;  // create a ostream to wrap msg->data
         msg.dim = 2;
         msg.tree_type = tree->GetTreeType();
