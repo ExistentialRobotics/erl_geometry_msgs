@@ -16,6 +16,7 @@
     <!-- common ROS dependencies -->
     <depend>std_msgs</depend>
     <depend>nav_msgs</depend>
+    <depend>shape_msgs</depend>
     <depend>erl_geometry</depend>
 
     <!-- message generation dependencies -->
